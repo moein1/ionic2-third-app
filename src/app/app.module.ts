@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { PlacePage } from "../pages/place/place";
 import { SetLocationPage } from "../pages/set-location/set-location";
 import { AddPlacePage } from "../pages/add-place/add-place";
+import { PlacesService } from "../service/places";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AddPlacePage } from "../pages/add-place/add-place";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},PlacesService
   ]
 })
 export class AppModule {}
